@@ -1,0 +1,21 @@
+{
+  "redis": {
+    "host": "localhost",
+    "port": "6379"
+  },
+  "email_service":{
+      "host": "127.0.0.1",
+      "port": 3005
+    },
+ "sms_service":{
+    "host": "127.0.0.1",
+    "port": 3007
+  },
+ "invoice_service":{
+    "host": "127.0.0.1",
+    "port": 3009
+  },
+  "mailSenderName": "TestMeesho",
+  "mailSenderEmail": "noreply@testmeesho.com"            
+
+}
