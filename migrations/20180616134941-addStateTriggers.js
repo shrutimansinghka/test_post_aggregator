@@ -25,7 +25,7 @@ module.exports = {
           type: Sequelize.INTEGER,
           allowNull: false
         },
-        emailState: {
+        state: {
           type: Sequelize.STRING
         },
         invoiceGenerated: {

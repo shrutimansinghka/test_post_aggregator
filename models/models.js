@@ -115,6 +115,25 @@ const EmailTemplate = db.sequelize.define("emailTemplates", {
         type: db.Sequelize.STRING,
         allowNull: false
     } 
+});
+
+const StateTrigger = db.sequelize.define("stateTriggers", {
+    id: {
+        type: db.Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    uuid: {
+        type: db.Sequelize.UUID,
+        unique: true,
+        defaultValue: db.Sequelize.UUIDV4
+    },
+    emailTemplateId: {
+        type: db.Sequelize.INTEGER    
+    },
+    state: {
+        type: db.Sequelize.STRING,
+    }
 })
 
 
@@ -122,6 +141,7 @@ module.exports = {
   Order: Order,
   Attachment: Attachment,
   SMSTemplate: SMSTemplate,
-  EmailTemplate: EmailTemplate
+  EmailTemplate: EmailTemplate,
+  StateTrigger: StateTrigger
  }
 
